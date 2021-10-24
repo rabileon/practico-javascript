@@ -179,6 +179,14 @@ a:hover {
   margin-top: 30px;
   gap: 50px;
 }
+
+.container-items-discount {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  align-items: center;
+}
+
 .item {
   background-color: var(--white);
   width: 350px;
