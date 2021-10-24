@@ -33,7 +33,7 @@
       <p>Este es el tercer taller del Curso práctico de JavaScript</p>
     </header>
     <div class="container-tallerTres">
-      <section class="item-taller3">
+      <section class="item-taller3 add">
         <img src="./assets/images/add.png" alt="Imagen de cuadrado" height="100"></img>
         <h2>Agregar</h2>
         <form >
@@ -48,8 +48,9 @@
         <h2>Lista de Valores cargados</h2>
         <ul id="list-values" >
         </ul>
+        <button class="primary-button" type="button" onclick="limpiarLista()"> Limpiar lista</button>
       </section>
-      <section class="item-taller3">
+      <section class="item-taller3 delete">
         <img src="./assets/images/delete-file.png" alt="Imagen de cuadrado" height="100"></img>
         <h2>Eliminar</h2>
         <form >
@@ -58,6 +59,15 @@
           <button class="primary-button" type="button" onclick="deleteValue()">Eliminar</button>
         </form>
         <p id="resultValueDelete"></p>
+      </section>
+      <section class="item-calcular" >
+        <p id="resultCalcular"></p>
+        <div class="calcular-buttons">
+          <button class="primary-button" type="button" onclick="calcularPromedio()">Calcular promedio</button>
+          <button class="primary-button" type="button" onclick="ejecutaCalcularModa()">Calcular moda</button>
+          <button class="primary-button" type="button">Calcular mediana</button>
+        </div>
+      
       </section>
     </div>
     <footer>

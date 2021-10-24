@@ -290,6 +290,7 @@ a:hover {
   grid-template-columns: repeat(3, auto);
   place-content: center;
   gap: 30px;
+  margin: 50px 0px;
 }
 
 .item-taller3 {
@@ -301,6 +302,31 @@ a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.item-calcular {
+  grid-column-start: 1;
+  grid-column-end: 4;
+  box-shadow: 2px 3px 20px -10px var(--secondary);
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 15px;
+  border-radius: 20px;
+}
+
+.item-calcular p {
+  margin: 10px;
+  border: 2px solid var(--colorText);
+  padding: 5px 100px;
+  border-radius: 20px;
+  display: none;
+}
+.calcular-buttons {
+  display: flex;
+  justify-content: center;
 }
 
 .item-list {
