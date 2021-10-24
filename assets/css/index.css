@@ -212,7 +212,8 @@ a:hover {
   margin-top: 20px;
 }
 
-.item form {
+.item form,
+.item-taller3 form {
   margin: 50px 0;
   text-align: center;
   display: flex;
@@ -220,12 +221,14 @@ a:hover {
   justify-content: center;
   align-items: center;
 }
-.item form label {
+.item form label,
+.item-taller3 form label {
   color: var(--colorText);
   font-size: var(--md);
 }
 
-.item form input {
+.item form input,
+.item-taller3 form input {
   color: var(--secondary);
   font-size: var(--lg);
   border: 2px solid var(--primary);
@@ -235,9 +238,9 @@ a:hover {
   margin: 15px;
 }
 
-.item form input:focus {
+.item form input:focus,
+.item-add form input:focus {
   background-color: var(--background);
-
   font-weight: 700;
   border: 2px solid var(--primary);
 }
@@ -279,4 +282,55 @@ a:hover {
   .title p {
     font-size: var(--sm);
   }
+}
+
+/* Taller 3 */
+.container-tallerTres {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  place-content: center;
+  gap: 30px;
+}
+
+.item-taller3 {
+  width: 350px;
+  box-shadow: 2px 3px 20px -10px var(--secondary);
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.item-list {
+  box-shadow: 2px 3px 20px -10px var(--secondary);
+  display: flex;
+  border-radius: 20px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  width: 350px;
+  height: 60vh;
+  padding: 15px;
+}
+
+.item-list ul {
+  overflow-y: auto;
+  width: 100%;
+  height: 100%;
+  margin-top: 10px;
+}
+
+.item-list ul::-webkit-scrollbar {
+  width: 10px;
+}
+.item-list ul::-webkit-scrollbar-track {
+  background: rgb(179, 177, 177);
+  border-radius: 10px;
+}
+
+.item-list ul::-webkit-scrollbar-thumb {
+  background: var(--secondary);
+  border-radius: 50px;
 }
