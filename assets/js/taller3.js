@@ -1,5 +1,5 @@
 let listValues = [];
-
+const resultValueDelete = document.getElementById('resultValueDelete');
 function addValue() {
   clearText();
   const resultValue = document.getElementById('resultValue');
@@ -20,11 +20,11 @@ function addValue() {
 function deleteValue() {
   clearText();
   const element = document.getElementById('InputDelete');
-  const resultValueDelete = document.getElementById('resultValueDelete');
+
   let value = parseInt(element.value);
   element.value = '';
 
-  if (Number.isNaN(value) || value <= 0) {
+  if (Number.isNaN(value) || value <= 0 || value > listValues.length) {
     resultValueDelete.innerHTML = 'Ingrese una posición válida';
     resultValueDelete.className = 'resultError';
     return false;
@@ -50,27 +50,25 @@ function calcularPromedio() {
   const resultCalcular = document.getElementById('resultCalcular');
 
   if (validateParaCalcular()) {
-    const promedio = calcularMediaAritmetica();
+    const promedio = calcularMediaAritmetica(listValues);
     resultCalcular.innerHTML = `El promedio es de: ${promedio}`;
     resultCalcular.className = 'resultSuccess';
     resultCalcular.style = 'display:block';
   }
 }
 
-function calcularMediaAritmetica() {
-  const sumaLista = listValues.reduce(function (
-    valorAcumulado = 0,
-    nuevoElemento
-  ) {
+function calcularMediaAritmetica(list) {
+  const sumaList = list.reduce((valorAcumulado, nuevoElemento) => {
     return valorAcumulado + nuevoElemento;
-  });
-  const promedioLista = sumaLista / listValues.length;
+  }, 0);
 
-  return promedioLista;
+  const mediaAritmetica = sumaList / list.length;
+  return parseFloat(mediaAritmetica.toFixed(2));
 }
 
 function clearText() {
   resultCalcular.style = 'display:none';
+  resultValueDelete.innerHTML = '';
 }
 
 function validateParaCalcular() {
@@ -85,6 +83,7 @@ function validateParaCalcular() {
 }
 
 function limpiarLista() {
+  clearText();
   if (validateParaCalcular()) {
     listValues.splice(0, listValues.length);
     resultCalcular.innerHTML = 'Se ha vaciado la lista de manera exitosa';
@@ -124,7 +123,42 @@ function calcularModa() {
     return elementoA[1] - elementoB[1];
   });
 
-  const moda = lista1Array[lista1Array.length - 1];
+  const moda = lista1Array[lista1Array.length - 1][0];
 
   return moda;
+}
+
+function esPar(value) {
+  return value % 2 === 0 ? true : false;
+}
+
+function ejecutaCalcularMediana() {
+  clearText();
+  const resultCalcular = document.getElementById('resultCalcular');
+
+  if (validateParaCalcular()) {
+    const mediana = calcularMediana();
+    resultCalcular.innerHTML = `La mediana es : ${mediana}`;
+    resultCalcular.className = 'resultSuccess';
+    resultCalcular.style = 'display:block';
+  }
+}
+
+function calcularMediana() {
+  const listaOrdenada = listValues.sort(function (a, b) {
+    return a - b;
+  });
+
+  const mitadLista = parseInt(listaOrdenada.length / 2);
+
+  if (esPar(listaOrdenada.length)) {
+    const elemento1 = listaOrdenada[mitadLista - 1];
+    const elemento2 = listaOrdenada[mitadLista];
+
+    const mediana = calcularMediaAritmetica([elemento1, elemento2]);
+    return mediana;
+  } else {
+    const mediana = listValues[mitadLista];
+    return mediana;
+  }
 }
