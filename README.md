@@ -2,8 +2,6 @@
 
 Repo personal del curso de JavaScript
 
-...
-
 ## Taller #1: Figuras geométricas
 
 - Primer paso: definir las formulas
@@ -24,3 +22,18 @@ Repo personal del curso de JavaScript
 - Segundo paso: Implementar la fórmula en JavaScript
 - Tercer paso: Crear funciones
 - Cuarto Paso Integrar JS con HTML
+
+## Deploy
+
+![Link](https://rabileon.github.io/practico-javascript/)
+
+## Contact
+
+You can visit my blog www.rabileon.com/blog
+
+contact me:
+<br/>
+<a href="https://rabileon.com/" target="_blank"><img src="https://rabileon.com/wp-content/uploads/2021/06/website.png"></a>
+<a href="https://www.linkedin.com/in/rabileon/" target="_blank"><img src="https://rabileon.com/wp-content/uploads/2021/06/linkedin.png"></a>
+<a href="https://twitter.com/rabileon" target="_blank"><img src="https://rabileon.com/wp-content/uploads/2021/06/twitter.png"></a>
+<a href="https://www.facebook.com/rabileonel" target="_blank"><img src="https://rabileon.com/wp-content/uploads/2021/06/facebook.png"></a>
