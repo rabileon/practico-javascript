@@ -155,7 +155,6 @@ function ejecutaCalcularMediaTop10() {
     resultCalcular.className = 'resultSuccess';
     resultCalcular.style = 'display:block';
   } else if (validateParaCalcular()) {
-    debugger;
     const listSorted = listValues.sort((salaryA, salaryB) => salaryA - salaryB);
     const newList = [...listSorted];
     const medianaTop10 = medianaSalarios(calcularTop10(newList));
@@ -166,8 +165,6 @@ function ejecutaCalcularMediaTop10() {
 }
 
 function calcularTop10(listSort) {
-  debugger;
-
   const spliceStart = parseInt((listSort.length * 90) / 100);
   const spliceCount = parseInt(listSort.length - spliceStart);
   const listTop10 = listSort.splice(spliceStart, spliceCount);
