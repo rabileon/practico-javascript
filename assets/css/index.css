@@ -215,7 +215,8 @@ a:hover {
 }
 
 .item form input,
-.item-taller3 form input {
+.item-taller3 form input,
+.item-addAndDelete div form input {
   color: var(--secondary);
   font-size: var(--lg);
   border: 2px solid var(--primary);
@@ -226,7 +227,8 @@ a:hover {
 }
 
 .item form input:focus,
-.item-add form input:focus {
+.item-add form input:focus,
+.item-addAndDelete div form input:focus {
   background-color: var(--background);
   font-weight: 700;
   border: 2px solid var(--primary);
@@ -240,7 +242,7 @@ a:hover {
 }
 
 /* Taller 3 */
-.container-tallerTres {
+.container-tallerTresCuatro {
   display: grid;
   grid-template-columns: repeat(3, auto);
   place-content: center;
@@ -257,6 +259,32 @@ a:hover {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+}
+
+.item-addAndDelete {
+  width: 350px;
+  box-shadow: 2px 3px 20px -10px var(--secondary);
+  padding: 15px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+}
+
+.item-addAndDelete div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.item-addAndDelete div > form {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .item-calcular {
@@ -292,7 +320,7 @@ a:hover {
   align-items: center;
   flex-direction: column;
   width: 350px;
-  height: 60vh;
+  height: 80vh;
   padding: 15px;
 }
 
@@ -319,7 +347,7 @@ a:hover {
 /* media */
 @media (max-width: 1220px) {
   .container-items,
-  .container-tallerTres,
+  .container-tallerTresCuatro,
   .calcular-buttons {
     display: flex;
     flex-direction: column;
@@ -353,9 +381,6 @@ a:hover {
   .title p {
     font-size: var(--sm);
   }
-}
-
-@media (max-width: 768px) {
   .container {
     display: flex;
     flex-direction: column;

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Taller #4 | Análisis Salarial</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="./assets/css/index.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+    <nav class="figuras-nav">
+      <a href="./index.html">Inicio</a>
+      <ul>
+        <li>
+          <a href="./figuras.html"> Taller #1</a>
+        </li>
+        <li>
+          <a href="descuentos.html"> Taller #2</a>
+        </li>
+        <li>
+          <a href="taller3.html"> Taller #3</a>
+        </li>
+      </ul>
+    </nav>
+    <header class="title">
+      <h1>Análisis Salarial</h1>
+      <p>Este es el tercer taller del Curso práctico de JavaScript</p>
+    </header>
+    <div class="container-tallerTresCuatro">
+        <section class="item-addAndDelete">
+            <div class="add">
+                <h2>Agregar</h2>
+                <form >
+                  <label for="InputValorLista">Ingrese un valor a la lista:</label>
+                  <input id="InputValorLista" type="number" />
+                  <button class="primary-button" type="button" onclick="addValue()">Agregar a la lista</button>
+                </form>
+                <p id="resultValue"></p>
+            </div>
+            <div class="delete">
+                <h2>Eliminar</h2>
+                <form >
+                  <label for="InputDelete">Ingresa la <strong>posición</strong>:</label>
+                  <input id="InputDelete" type="number" />
+                  <button class="primary-button" type="button" onclick="deleteValue()">Eliminar</button>
+                </form>
+                <p id="resultValueDelete"></p>
+            </div>      
+        </section>
+        
+        <section class="item-list">
+          <h2>Lista de valores cargados</h2>
+          <ul id="list-values" >
+          </ul>
+          <button class="primary-button" type="button" onclick="limpiarLista()"> Limpiar lista</button>
+        </section>
+        <section class="item-list">
+            <h2>Lista de valores pre-cargados</h2>
+            <ul id="list-values-precargados" >
+            </ul>
+        </section>
+        <section class="item-calcular" >
+          <p id="resultCalcular"></p>
+          <label class="check"><input type="checkbox" id="checkInput" value="" checked=""> Calcular solo lista pre-cargada</label>
+          <div class="calcular-buttons">
+            <button class="primary-button" type="button" onclick="ejecutaCalcularMediaTop10()">Calcular media TOP 10</button>
+            <button class="primary-button" type="button" onclick="ejecutaCalcularMediana()">Calcular mediana salarial</button>
+          </div>
+        
+        </section>
+      </div>
+      <footer>
+        <p>Rabi León - Developer</p>
+      </footer>
+      <script src="./assets/js/salarios.js"/></script>
+      <script src="./assets/js/taller4.js"/></script>
+      <script>
+        renderList(salaries);
+        </script>
+  </body>
+</html>

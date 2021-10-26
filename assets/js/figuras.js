@@ -119,7 +119,6 @@ function calcularPerimetroTriangulo() {
   const inputLadoA = document.getElementById('InputLadoATriangulo');
   const inputLadoB = document.getElementById('InputLadoBTriangulo');
   const inputBaseTriangulo = document.getElementById('InputBaseTriangulo');
-  debugger;
 
   const ladoA = inputLadoA.value;
   const ladoB = inputLadoB.value;
@@ -179,7 +178,6 @@ function validaCamposArea(base, altura) {
 }
 
 function calcularAlturaTriangulo() {
-  debugger;
   const ladoA = document.getElementById('InputLadoATriangulo').value;
   const ladoB = document.getElementById('InputLadoBTriangulo').value;
   const base = document.getElementById('InputBaseTriangulo').value;
