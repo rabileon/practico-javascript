@@ -1,4 +1,4 @@
-# practico-javascript
+# Práctico JavaScript
 
 Repo personal del curso de JavaScript
 
@@ -19,13 +19,19 @@ Repo personal del curso de JavaScript
 ## Taller #3: Promedio, mediana y moda
 
 - Primer paso: Definir las fórmulas
-- Segundo paso: Implementar la fórmula en JavaScript
+- Segundo paso: Implementar la fórmulas en JavaScript
+- Tercer paso: Crear funciones
+- Cuarto Paso Integrar JS con HTML
+
+## Taller #4: Análisis Salarial
+- Primer paso: Carga lista predeterminada de salarios
+- Segundo paso: Implementar la fórmulas en JavaScript
 - Tercer paso: Crear funciones
 - Cuarto Paso Integrar JS con HTML
 
 ## Deploy
 
-![Link](https://rabileon.github.io/practico-javascript/)
+[Link](https://rabileon.github.io/practico-javascript/)
 
 ## Contact
 
